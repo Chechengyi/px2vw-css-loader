@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 90px;
+  background-color: #333;
+}
+.font {
+  font-size: 40px;
+}
+.font-px {
+  color: red;
+  width: 400px; /*px*/
+  font-size: 40px; /*px*/
+  background-color: #ccc;
+}
+.font-no {
+  font-size: 40px; /*no*/
+}
+.border-1 {
+  border-bottom: 1px solid red; /*px*/
+}
+.tip {
+  margin: 40px 24px;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 10pxrgba(0,0,0,0.05); /*no*/
+}

@@ -1,0 +1,23 @@
+{
+  "name": "px2vw-css-loader",
+  "version": "0.0.2",
+  "description": "将px转为vw单位 webpack loader",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "px",
+    "vw",
+    "webpack-loader"
+  ],
+  "author": "chechengyi",
+  "git": "https://github.com/Chechengyi/px2vw-css-loader",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^2.0.0",
+    "px2vw-css": "^1.0.2"
+  },
+  "devDependencies": {}
+}

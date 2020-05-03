@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Document</title>
+  <script>
+    var win = window;
+    var doc = win.document;
+    var docEl = doc.documentElement;
+    var metaEl = doc.querySelector('meta[name="viewport"]');
+    var dpr = 0;
+    var scale = 0;
+    if (metaEl) {
+      console.warn('将根据已有的meta标签来设置缩放比例');
+      var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+      if (match) {
+        scale = parseFloat(match[1]);
+        dpr = parseInt(1 / scale);
+      }
+    } else {
+      console.warn('没有设置meta标签！！');
+    }
+    docEl.setAttribute('data-dpr', dpr);
+  </script>
+</head>
+
+<body>
+  <div class='header'></div>
+  <p class='font'>字体转换为vw单位</p>
+  <p class='font-px'>使用/*px*/</p>
+  <p class='font-no border-1'>使用/*no*/ & 1px边框</p>
+  <p class='tip'>
+    要使用 /*px*/ 本质上与flexible.js 的做法还是一样的，可以直接引入淘宝的flexible.js文件。但是我觉得凡是方案
+    都是有着一定的约定的，可以规定在项目中引入
+    ```
+    <code>meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /></code>
+    ```
+    然后关于设置 data-dpr 的代码只需要引入上面切割后的 一小段就可以了
+  </p>
+  <script src="./dist/example.js"></script>
+</body>
+
+</html>
