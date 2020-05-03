@@ -18,7 +18,7 @@
         loader: 'css-loader'
       },
       {
-        loader: '../lib/index.js',
+        loader: 'px2vw-css-loader',
         options: {
           unitWidth: 750,   // 设计稿的宽度
           baseDpr: 2,       // 默认的dpr
